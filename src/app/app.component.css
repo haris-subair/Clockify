@@ -1,0 +1,14 @@
+p {
+  font-family: Lato;
+}
+.sidebar {
+  width: 30%;
+  float: left;
+  display: flex;
+ 
+}
+
+.main {
+  width: 70%;
+  float: right;
+}

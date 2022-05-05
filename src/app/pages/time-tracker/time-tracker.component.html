@@ -1,0 +1,34 @@
+<div>
+  <div style="padding:10px">
+    <button class="btn" (click)="onNewProject(template)">
+      Create new project
+    </button>
+  </div>
+  <div style="padding : 10px">
+    <button (click)="onStartTimer()" *ngIf="!timerRunning">Start Timer</button>
+
+    <button (click)="onStopTimer()" *ngIf="timerRunning">Stop Timer</button>
+
+    <span> Duration is here {{ duration }} </span>
+  </div>
+</div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button
+      type="button"
+      class="btn-close close pull-right"
+      aria-label="Close"
+      (click)="modalRef?.hide()"
+    >
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div>
+      <span> Project Name </span>
+      <input type="text" name="projectName" [(ngModel)]="projectName" />
+    </div>
+  </div>
+</ng-template>
